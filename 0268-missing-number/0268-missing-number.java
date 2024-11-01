@@ -12,7 +12,7 @@ class Solution {
                 if(i==nums[j])
                 {
                     found=true;
-                    break;
+             
 
                 }
             }
