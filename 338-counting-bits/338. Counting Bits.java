@@ -2,9 +2,11 @@ class Solution {
     public int[] countBits(int n) {
         int arr[]=new int[n+1];
         arr[0]=0;
-        for(int i=1;i<=n;i++)
+        int k=1;
+        while(k<=n)
         {
-            arr[i]=arr[i/2]+(i%2);
+            arr[k]=arr[k/2]+(k%2);
+            k++;
         }
         return arr;
     } 
