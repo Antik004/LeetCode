@@ -3,7 +3,6 @@ class Solution {
         int rowlength=grid.length;
         int columnlength=grid[0].length;
         int[][] grid2=new int[k][k];
-        int p=0,q=0;
         for(int i=0;i<k;i++)
         {
             for(int j=0;j<k;j++)
