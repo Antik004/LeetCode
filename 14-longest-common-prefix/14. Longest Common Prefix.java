@@ -4,8 +4,7 @@ class Solution {
         {
             return "";
         }
-        int l=strs[0].length();
-        for(int i=0;i<l;i++)
+        for(int i=0;i<strs[0].length();i++)
         {
             char c=strs[0].charAt(i);
             for(int j=0;j<strs.length;j++)
