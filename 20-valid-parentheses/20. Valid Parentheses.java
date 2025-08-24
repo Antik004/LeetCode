@@ -1,10 +1,7 @@
 class Solution {
     public boolean isValid(String s) {
         Stack <Character> mystack =new Stack<>();
-        int i=0;
-        while(i<s.length())
-        {
-            char c=s.charAt(i);
+        for(char c:s.toCharArray()){
             if(c=='('||c=='{'||c=='[')
             {
                 mystack.push(c);
@@ -22,7 +19,6 @@ class Solution {
                         return false;
                     }
             }
-            i++;
         }
         return mystack.isEmpty();
     }
