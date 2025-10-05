@@ -7,7 +7,7 @@ public:
             columnNumber--;
             char c='A'+(columnNumber%26);
             colname=c+colname;
-            columnNumber=columnNumber/26;
+            columnNumber/=26;
         }
         return colname;
     }
