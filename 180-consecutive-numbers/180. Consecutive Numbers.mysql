@@ -1,0 +1,13 @@
+# Write your MySQL query statement below
+with customTable as
+(
+    Select id,num,
+    row_number() over (order by id) - #substracting here
+    row_number() over (partition by num order by id) as tally
+    from Logs 
+)
+Select distinct num as ConsecutiveNums
+from customTable
+group by num,tally
+having count(*)>=3
+

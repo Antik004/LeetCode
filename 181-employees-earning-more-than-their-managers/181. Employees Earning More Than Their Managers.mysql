@@ -1,0 +1,7 @@
+# Write your MySQL query statement below
+    Select Employee.name as Employee
+    from Employee
+    join Employee as Manager 
+    where Employee.ManagerId=Manager.Id
+    and Employee.salary>Manager.salary
+

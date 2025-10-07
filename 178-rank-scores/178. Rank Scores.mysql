@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+-- DENSE_RANK() IS USED SO THAT THERE IS SAME RANK FOR SIMILAR VALUES AND THE RANK ONLY INCREMENTS BY 1 WITHOUT ANY SKIPPING.
+Select score,
+DENSE_RANK() over (order by score desc) as `rank` 
+from Scores
+
