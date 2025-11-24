@@ -5,7 +5,7 @@ class Solution {
     {
         frequency.put(ch,frequency.getOrDefault(ch,0)+1);
     }
-    List<Map.Entry<Character,Integer>> list=new ArrayList<>     (frequency.entrySet());
+    List<Map.Entry<Character,Integer>> list=new ArrayList<>(frequency.entrySet());
 
     Collections.sort(list,(e1,e2)->e2.getValue().compareTo(e1.getValue()));
 
