@@ -11,21 +11,17 @@ class Solution {
             return Integer.compare(a[0],b[0]);
         });
 
-        for (int i = 0; i < intervals.length; i++) {
-            for (int j = 0; j < intervals.length; j++) {
+        int remaining = 0;
+        int maxEnd = 0;
 
-                if (i == j)
-                    continue;
-
-                if (intervals[j][0] <= intervals[i][0] &&
-                    intervals[i][1] <= intervals[j][1]) {
-
-                    c++;
-                    break;
-                }
+        for (int[] interval : intervals) {
+        
+            if (interval[1] > maxEnd) {
+                remaining++;
+                maxEnd = interval[1];
             }
         }
 
-        return intervals.length - c;
+        return remaining;
     }
 }
