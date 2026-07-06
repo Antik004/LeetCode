@@ -1,8 +1,5 @@
 class Solution {
     public int removeCoveredIntervals(int[][] intervals) {
-
-        int c = 0;
-
         Arrays.sort(intervals,(a,b)->{
             if(a[0]==b[0])
             {
@@ -10,7 +7,6 @@ class Solution {
             }
             return Integer.compare(a[0],b[0]);
         });
-
         int remaining = 0;
         int maxEnd = 0;
 
@@ -21,7 +17,6 @@ class Solution {
                 maxEnd = interval[1];
             }
         }
-
         return remaining;
     }
 }
